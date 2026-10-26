@@ -614,3 +614,36 @@ footer a:hover{transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
 }
+
+/* ===== WORK EXPERIENCE ===== */
+.jobs{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.job{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px 26px 22px;
+  transition:border-color .2s,transform .3s ease;
+}
+.job:hover{border-color:var(--accent);transform:translateY(-3px)}
+.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:6px 18px;flex-wrap:wrap}
+.job h3{font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.25;margin:0}
+.job .when{font-size:14px;font-weight:600;color:var(--accent);white-space:nowrap}
+.job .where{color:var(--muted);font-size:15.5px;margin:4px 0 14px}
+.job ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.job ul li{position:relative;padding-left:20px;font-size:16px;line-height:1.55}
+.job ul li::before{
+  content:"";
+  position:absolute;
+  left:0;top:.7em;
+  width:6px;height:6px;
+  border-radius:50%;
+  background:var(--accent);
+}
+@media (max-width:720px){
+  .job{padding:22px 20px 18px}
+}
+
+/* Turns off animations for people who prefer reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
